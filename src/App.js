@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Pane } from 'evergreen-ui';
+import { Heading } from 'evergreen-ui';
+
+import Forms from './components/Form';
+import ToDoList from './components/ToDoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Pane display='flex' flexDirection='column' padding={10} borderRadius={3}>
+      <Heading size={900} textAlign='center' paddingBottom={10}>
+        To Do List ✒️
+      </Heading>
+
+      <Forms />
+      <ToDoList />
+    </Pane>
   );
 }
 
